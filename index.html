@@ -70,8 +70,660 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+<!-- GLA Hero Section - Enhanced Version -->
+<section class="gla-hero-section">
+  <div class="gla-gradient-overlay"></div>
+  <div class="gla-hero-container">
+    <div class="gla-hero-content">
+      <div class="gla-tagline">
+        <svg class="gla-tagline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        TRANSFORM YOUR FUTURE
+      </div>
+      
+      <h1 class="gla-hero-title">
+        Advance your career with
+        <span class="gla-hero-highlight">Online Degrees</span>
+        <span class="gla-from-text">from</span>
+      </h1>
+      
+      <div class="gla-logo-wrapper">
+        <div class="gla-logo-text">GLA</div>
+        <div class="gla-logo-underline"></div>
+      </div>
+      
+      <div class="gla-badges-container">
+        <div class="gla-badge">
+          <div class="gla-badge-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+              <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+            </svg>
+          </div>
+          <div class="gla-badge-text">
+            <span class="gla-badge-label">NAAC</span>
+            <span class="gla-badge-value">A++ Accredited</span>
+          </div>
+        </div>
+        
+        <div class="gla-badge">
+          <div class="gla-badge-icon gla-badge-icon-ugc">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+              <path fill="#1f2937" d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="gla-badge-text">
+            <span class="gla-badge-label">UGC</span>
+            <span class="gla-badge-value">Approved</span>
+          </div>
+        </div>
+      </div>
 
-  <section class="hero-section">
+      <div class="gla-programs-container">
+        <span class="gla-program-tag">MBA</span>
+        <span class="gla-program-tag">MCA</span>
+        <span class="gla-program-tag">BBA</span>
+        <span class="gla-program-tag">BCA</span>
+        <span class="gla-program-tag">B.Com</span>
+      </div>
+
+      <button class="gla-explore-btn">
+        <span>EXPLORE PROGRAMS</span>
+        <svg class="gla-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- GLA Hero Section - End -->
+
+<style>
+/* Enhanced GLA Hero Section with Better Readability */
+.gla-hero-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url('https://gla-online-common.vercel.app/banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* Subtle gradient overlay for better text readability */
+.gla-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    rgba(17, 24, 39, 0.75) 0%,
+    rgba(17, 24, 39, 0.65) 25%,
+    rgba(17, 24, 39, 0.45) 45%,
+    rgba(17, 24, 39, 0.25) 65%,
+    transparent 85%
+  );
+  z-index: 1;
+}
+
+.gla-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.gla-hero-content {
+  max-width: 650px;
+  animation: glaFadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gla-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #111827;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  padding: 8px 20px;
+  border-radius: 25px;
+  margin-bottom: 18px;
+  box-shadow: 
+    0 4px 20px rgba(251, 191, 36, 0.5),
+    0 0 0 3px rgba(251, 191, 36, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.gla-tagline::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  animation: glaShine 3s infinite;
+}
+
+.gla-tagline-icon {
+  width: 16px;
+  height: 16px;
+  color: #111827;
+  animation: glaPulseIcon 2s ease-in-out infinite;
+}
+
+.gla-hero-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gla-hero-highlight {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #fbbf24 0%, #fde047 25%, #facc15 50%, #fbbf24 75%, #f59e0b 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 8px 0;
+  animation: glaGradientFlow 4s linear infinite;
+  filter: 
+    drop-shadow(0 2px 8px rgba(251, 191, 36, 0.6))
+    drop-shadow(0 4px 16px rgba(251, 191, 36, 0.4));
+  line-height: 1.1;
+}
+
+.gla-from-text {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #f3f4f6;
+  margin-top: 6px;
+  font-style: italic;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gla-logo-wrapper {
+  margin: 15px 0 22px 0;
+}
+
+.gla-logo-text {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 16px;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 30px rgba(255, 255, 255, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+  animation: glaLogoGlow 3s ease-in-out infinite;
+}
+
+.gla-logo-underline {
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b, transparent);
+  margin-top: 8px;
+  border-radius: 2px;
+  animation: glaUnderlineExpand 2s ease-in-out infinite;
+}
+
+.gla-badges-container {
+  display: flex;
+  gap: 15px;
+  margin: 22px 0;
+  flex-wrap: wrap;
+}
+
+.gla-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  padding: 12px 22px;
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.3);
+  border: 2px solid transparent;
+}
+
+.gla-badge:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.35),
+    0 0 0 3px rgba(251, 191, 36, 0.3);
+  border-color: #fbbf24;
+}
+
+.gla-badge-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #1f2937;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+}
+
+.gla-badge-icon-ugc {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.gla-badge-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.gla-badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gla-badge-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.gla-badge-value {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #111827;
+  line-height: 1.1;
+}
+
+.gla-programs-container {
+  display: flex;
+  gap: 12px;
+  margin: 22px 0;
+  flex-wrap: wrap;
+}
+
+.gla-program-tag {
+  padding: 8px 20px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111827;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: 
+    0 3px 12px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.3);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.gla-program-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.gla-program-tag:hover::before {
+  left: 0;
+}
+
+.gla-program-tag:hover {
+  color: #111827;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 
+    0 6px 24px rgba(251, 191, 36, 0.5),
+    0 0 0 2px rgba(251, 191, 36, 0.4);
+  border-color: #fbbf24;
+}
+
+.gla-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #111827;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 8px 30px rgba(251, 191, 36, 0.6),
+    0 0 0 0 rgba(251, 191, 36, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.gla-explore-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: left 0.6s;
+}
+
+.gla-explore-btn:hover::before {
+  left: 100%;
+}
+
+.gla-explore-btn:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 12px 45px rgba(251, 191, 36, 0.8),
+    0 0 0 8px rgba(251, 191, 36, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.gla-explore-btn:active {
+  transform: translateY(-3px) scale(1.01);
+}
+
+.gla-btn-arrow {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.gla-explore-btn:hover .gla-btn-arrow {
+  transform: translateX(6px);
+}
+
+/* Animations */
+@keyframes glaFadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glaGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes glaLogoGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 2px 4px rgba(0, 0, 0, 0.5),
+      0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    text-shadow: 
+      0 0 40px rgba(255, 255, 255, 0.7),
+      0 0 60px rgba(255, 255, 255, 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.5),
+      0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes glaUnderlineExpand {
+  0%, 100% {
+    width: 180px;
+  }
+  50% {
+    width: 220px;
+  }
+}
+
+@keyframes glaShine {
+  0% {
+    top: -50%;
+    right: -50%;
+  }
+  100% {
+    top: 150%;
+    right: 150%;
+  }
+}
+
+@keyframes glaPulseIcon {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gla-hero-section {
+    height: 550px;
+  }
+
+  .gla-gradient-overlay {
+    background: linear-gradient(
+      100deg,
+      rgba(17, 24, 39, 0.80) 0%,
+      rgba(17, 24, 39, 0.70) 35%,
+      rgba(17, 24, 39, 0.50) 55%,
+      rgba(17, 24, 39, 0.30) 75%,
+      transparent 90%
+    );
+  }
+
+  .gla-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .gla-hero-highlight {
+    font-size: 2.6rem;
+  }
+
+  .gla-from-text {
+    font-size: 1.3rem;
+  }
+
+  .gla-logo-text {
+    font-size: 3.8rem;
+    letter-spacing: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gla-hero-section {
+    height: 500px;
+    padding: 30px 15px;
+  }
+
+  .gla-gradient-overlay {
+    background: linear-gradient(
+      100deg,
+      rgba(17, 24, 39, 0.85) 0%,
+      rgba(17, 24, 39, 0.75) 40%,
+      rgba(17, 24, 39, 0.60) 70%,
+      rgba(17, 24, 39, 0.40) 100%
+    );
+  }
+
+  .gla-hero-container {
+    padding: 0 20px;
+  }
+
+  .gla-tagline {
+    font-size: 0.7rem;
+    padding: 7px 16px;
+  }
+
+  .gla-tagline-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .gla-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .gla-hero-highlight {
+    font-size: 2.2rem;
+  }
+
+  .gla-from-text {
+    font-size: 1.2rem;
+  }
+
+  .gla-logo-text {
+    font-size: 3.2rem;
+    letter-spacing: 10px;
+  }
+
+  .gla-logo-underline {
+    width: 140px;
+  }
+
+  .gla-badges-container {
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .gla-badge {
+    padding: 10px 18px;
+  }
+
+  .gla-badge-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .gla-badge-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .gla-badge-value {
+    font-size: 0.9rem;
+  }
+
+  .gla-programs-container {
+    gap: 10px;
+    margin: 18px 0;
+  }
+
+  .gla-program-tag {
+    padding: 7px 18px;
+    font-size: 1.1rem;
+  }
+
+  .gla-explore-btn {
+    padding: 14px 36px;
+    font-size: 0.9rem;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gla-hero-section {
+    height: 480px;
+  }
+
+  .gla-gradient-overlay {
+    background: rgba(17, 24, 39, 0.80);
+  }
+
+  .gla-hero-title {
+    font-size: 1.4rem;
+  }
+
+  .gla-hero-highlight {
+    font-size: 1.9rem;
+  }
+
+  .gla-from-text {
+    font-size: 1.1rem;
+  }
+
+  .gla-logo-text {
+    font-size: 2.6rem;
+    letter-spacing: 8px;
+  }
+
+  .gla-logo-underline {
+    width: 110px;
+  }
+
+  .gla-badges-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gla-programs-container {
+    gap: 8px;
+  }
+
+  .gla-program-tag {
+    padding: 6px 16px;
+    font-size: 1rem;
+  }
+
+  .gla-explore-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 32px;
+  }
+}
+</style>
+
+  
+  <!-- <section class="hero-section">
     <div class="hero-decor hero-decor--1" aria-hidden="true"></div>
     <div class="hero-decor hero-decor--2" aria-hidden="true"></div>
     <div class="hero-decor hero-decor--3" aria-hidden="true"></div>
@@ -113,7 +765,7 @@
       </div>
       <div class="hero-spacer" aria-hidden="true"></div>
     </div>
-  </section>
+  </section> -->
 
   <div class="applybtn"><a href="#enquire-now">Enquire Now</a></div>
   <div class="form-sec" id="enquire-now">
