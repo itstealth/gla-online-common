@@ -748,3 +748,285 @@ h1{
   }
 }
 
+/* About GLA Online & Digital Learnings Section */
+:root {
+  --gla-digital-bg: #fafbfc;
+  --gla-digital-text-primary: #1a1a1a;
+  --gla-digital-text-secondary: #666;
+  --gla-digital-card-shadow: rgba(0, 0, 0, 0.06);
+  --gla-digital-card-shadow-hover: rgba(0, 0, 0, 0.12);
+  --gla-digital-cta-color: #FF6633;
+  --gla-digital-cta-hover: #e55a2a;
+}
+
+.gla-digital-section {
+  width: 100%;
+  background-color: var(--gla-digital-bg);
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.gla-digital-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.gla-digital-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gla-digital-heading {
+  font-family: 'Queens', Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--gla-digital-text-primary);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.gla-digital-subtitle {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: var(--gla-digital-text-secondary);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gla-digital-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.gla-digital-card {
+  border-radius: 20px;
+  padding: 36px 28px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--gla-digital-card-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.gla-digital-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px var(--gla-digital-card-shadow-hover);
+}
+
+.gla-digital-card:focus {
+  outline: 3px solid var(--gla-digital-cta-color);
+  outline-offset: 4px;
+}
+
+/* Card Color Variants */
+.gla-digital-card--blue {
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+}
+
+.gla-digital-card--green {
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+}
+
+.gla-digital-card--purple {
+  background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+}
+
+.gla-digital-card--pink {
+  background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+}
+
+.gla-digital-card--yellow {
+  background: linear-gradient(135deg, #FFF9C4, #FFF59D);
+}
+
+.gla-digital-card--lavender {
+  background: linear-gradient(135deg, #EDE7F6, #D1C4E9);
+}
+
+.gla-digital-card--cyan {
+  background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+}
+
+.gla-digital-card--peach {
+  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+}
+
+.gla-digital-card__icon {
+  width: 110px;
+  height: 110px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.gla-digital-card__icon-symbol {
+  font-size: 48px;
+  line-height: 1;
+  display: block;
+}
+
+.gla-digital-card__title {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.5;
+  max-width: 240px;
+  margin: 20px 0 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.gla-digital-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.gla-digital-cta__button {
+  display: inline-block;
+  background-color: var(--gla-digital-cta-color);
+  color: #ffffff;
+  padding: 16px 48px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.gla-digital-cta__button:hover {
+  background-color: var(--gla-digital-cta-hover);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 102, 51, 0.3);
+}
+
+.gla-digital-cta__button:focus {
+  outline: 3px solid var(--gla-digital-cta-color);
+  outline-offset: 4px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .gla-digital-section {
+    padding: 60px 30px;
+  }
+  
+  .gla-digital-heading {
+    font-size: 36px;
+  }
+  
+  .gla-digital-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .gla-digital-card {
+    min-height: 280px;
+    padding: 32px 24px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .gla-digital-section {
+    padding: 40px 20px;
+  }
+  
+  .gla-digital-header {
+    margin-bottom: 40px;
+  }
+  
+  .gla-digital-heading {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .gla-digital-subtitle {
+    font-size: 16px;
+  }
+  
+  .gla-digital-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .gla-digital-card {
+    min-height: 260px;
+    padding: 28px 20px;
+  }
+  
+  .gla-digital-card__icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  
+  .gla-digital-card__icon-symbol {
+    font-size: 40px;
+  }
+  
+  .gla-digital-card__title {
+    font-size: 17px;
+    max-width: 100%;
+  }
+  
+  .gla-digital-cta {
+    margin-top: 30px;
+  }
+  
+  .gla-digital-cta__button {
+    padding: 14px 40px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .gla-digital-heading {
+    font-size: 28px;
+  }
+  
+  .gla-digital-card {
+    min-height: 240px;
+    padding: 24px 16px;
+  }
+  
+  .gla-digital-card__icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .gla-digital-card__icon-symbol {
+    font-size: 36px;
+  }
+  
+  .gla-digital-card__title {
+    font-size: 16px;
+  }
+}
+
