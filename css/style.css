@@ -532,7 +532,7 @@ h1{
   position: relative;
   z-index: 3;
   grid-column: 1 / 9; /* Takes 8 columns (1 to 9) - 66.67% width */
-  padding: 80px 40px 80px 0;
+  padding: 0 40px 80px 0;
   display: flex;
   align-items: center;
 }
@@ -1032,6 +1032,304 @@ h1{
 }
 
 /* About GLA Programs Section */
+.gla-programs-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 40px 40px;
+}
+
+.gla-programs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gla-programs-heading {
+  font-family: 'Queens', Georgia, 'Times New Roman', serif;
+  font-size: 44px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+/* Tabs */
+.gla-programs-tabs {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  margin-bottom: 24px;
+}
+
+.gla-programs-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gla-programs-tabs__tab {
+  border: 1px solid #e5e7eb;
+  background-color: transparent;
+  color: #666666;
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.gla-programs-tabs__tab:hover {
+  background-color: #FFF4E6;
+  color: #FF6633;
+}
+
+.gla-programs-tabs__tab--active {
+  background-color: #FF6633;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.gla-programs-tabs__icon {
+  font-size: 18px;
+}
+
+.gla-programs-tabs__badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Dialog Layout */
+.gla-programs-dialog {
+  margin-top: 24px;
+}
+
+.gla-programs-dialog__inner {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  min-height: 500px;
+}
+
+.gla-programs-dialog__image-wrapper {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.gla-programs-dialog__image {
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.gla-programs-dialog__details {
+  flex: 0 0 55%;
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gla-programs-dialog__title {
+  font-family: 'Queens', Georgia, 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.gla-programs-dialog__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gla-programs-dialog__meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.gla-programs-dialog__meta-icon {
+  font-size: 16px;
+}
+
+.gla-programs-dialog__description {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
+  margin: 8px 0 0 0;
+}
+
+.gla-programs-dialog__specializations {
+  display: none;
+  margin-top: 8px;
+}
+
+.gla-programs-dialog__specializations--visible {
+  display: block;
+}
+
+.gla-programs-dialog__specializations-title {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.gla-programs-dialog__specializations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.gla-programs-dialog__specialization-pill {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #FFF4E6;
+  color: #FF6633;
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gla-programs-dialog__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.gla-programs-dialog__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px;
+}
+
+.gla-programs-dialog__btn--primary {
+  background-color: #10B981;
+  color: #ffffff;
+}
+
+.gla-programs-dialog__btn--primary:hover {
+  background-color: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+  transform: translateY(-2px);
+}
+
+.gla-programs-dialog__btn--secondary {
+  background-color: #FF6633;
+  color: #ffffff;
+}
+
+.gla-programs-dialog__btn--secondary:hover {
+  background-color: #e55a2a;
+  box-shadow: 0 4px 12px rgba(255, 102, 51, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Tabs & dialog responsive */
+@media (max-width: 1024px) {
+  .gla-programs-section {
+    padding: 40px 24px 32px;
+  }
+
+  .gla-programs-dialog__inner {
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .gla-programs-dialog__image-wrapper {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .gla-programs-dialog__details {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gla-programs-section {
+    padding: 32px 16px 24px;
+  }
+
+  .gla-programs-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .gla-programs-tabs {
+    padding: 12px 16px;
+  }
+
+  .gla-programs-tabs__tab {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .gla-programs-dialog__inner {
+    flex-direction: column;
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .gla-programs-dialog__image-wrapper,
+  .gla-programs-dialog__details {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gla-programs-dialog__image {
+    height: 250px;
+  }
+
+  .gla-programs-dialog__actions {
+    flex-direction: column;
+  }
+
+  .gla-programs-dialog__btn {
+    width: 100%;
+  }
+}
+
 .gla-programs-section {
   width: 100%;
   background-color: #ffffff;

@@ -185,158 +185,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="gla-programs-section">
   <div class="gla-programs-container">
     <h2 class="gla-programs-heading">About GLA Programs</h2>
-    
-    <div class="gla-programs-grid">
-      <!-- Card 1 - BCA -->
-      <article class="gla-programs-card" data-course="bca" aria-label="Bachelor of Computer Applications program">
-        <div class="gla-programs-card__image-wrapper">
-          <div class="gla-programs-card__image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop');"></div>
-          <div class="gla-programs-card__overlay"></div>
+
+    <!-- Tab Navigation -->
+    <nav class="gla-programs-tabs" role="tablist" aria-label="GLA Programs">
+      <button class="gla-programs-tabs__tab gla-programs-tabs__tab--active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="gla-programs-panel"
+              id="tab-bca"
+              data-course="bca">
+        <span class="gla-programs-tabs__icon">🎓</span>
+        <span class="gla-programs-tabs__label">BCA</span>
+      </button>
+      <button class="gla-programs-tabs__tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gla-programs-panel"
+              id="tab-mca"
+              data-course="mca">
+        <span class="gla-programs-tabs__icon">💻</span>
+        <span class="gla-programs-tabs__label">MCA</span>
+      </button>
+      <button class="gla-programs-tabs__tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gla-programs-panel"
+              id="tab-mba"
+              data-course="mba">
+        <span class="gla-programs-tabs__icon">📊</span>
+        <span class="gla-programs-tabs__label">MBA</span>
+        <span class="gla-programs-tabs__badge">10 Specs</span>
+      </button>
+      <button class="gla-programs-tabs__tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gla-programs-panel"
+              id="tab-bba"
+              data-course="bba">
+        <span class="gla-programs-tabs__icon">🏢</span>
+        <span class="gla-programs-tabs__label">BBA</span>
+      </button>
+      <button class="gla-programs-tabs__tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="gla-programs-panel"
+              id="tab-bcom"
+              data-course="bcom">
+        <span class="gla-programs-tabs__icon">📚</span>
+        <span class="gla-programs-tabs__label">B.Com (Hons.)</span>
+      </button>
+    </nav>
+
+    <!-- Dialog Content Area -->
+    <div class="gla-programs-dialog" id="gla-programs-panel" role="tabpanel" aria-labelledby="tab-bca">
+      <div class="gla-programs-dialog__inner">
+        <div class="gla-programs-dialog__image-wrapper">
+          <img id="programImage" class="gla-programs-dialog__image" src="" alt="Program image" loading="lazy">
         </div>
-        <div class="gla-programs-card__content">
-          <h3 class="gla-programs-card__title">Bachelor of Computer Applications</h3>
-          <p class="gla-programs-card__description">Embark on a transformative journey with GLA University's Online BCA degree. Dive into a comprehensive curriculum designed for the digital age, blending theoretical knowledge with practical skills.</p>
-          <div class="gla-programs-card__meta">
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">🎓</span>
-              <span class="gla-programs-card__meta-text">BCA</span>
-            </span>
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">📅</span>
-              <span class="gla-programs-card__meta-text">3 Years</span>
-            </span>
-          </div>
-          <div class="gla-programs-card__buttons">
-            <button class="gla-programs-card__cta gla-programs-card__cta--apply" onclick="window.location.href='#enquire-now'" aria-label="Apply for Bachelor of Computer Applications">Apply</button>
-            <button class="gla-programs-card__cta gla-programs-card__cta--knowmore" data-course="bca" aria-label="Know more about Bachelor of Computer Applications">Know more</button>
-          </div>
-        </div>
-      </article>
-      
-      <!-- Card 2 - MCA -->
-      <article class="gla-programs-card" data-course="mca" aria-label="Master of Computer Applications program">
-        <div class="gla-programs-card__image-wrapper">
-          <div class="gla-programs-card__image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop');"></div>
-          <div class="gla-programs-card__overlay"></div>
-        </div>
-        <div class="gla-programs-card__content">
-          <h3 class="gla-programs-card__title">Master of Computer Applications</h3>
-          <p class="gla-programs-card__description">Gain a competitive edge with GLA University's Online MCA degree, offering flexibility and convenience. Access world-class education, interactive virtual classrooms, and expert faculty.</p>
-          <div class="gla-programs-card__meta">
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">🎓</span>
-              <span class="gla-programs-card__meta-text">MCA</span>
-            </span>
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">📅</span>
-              <span class="gla-programs-card__meta-text">2 Years</span>
-            </span>
-          </div>
-          <div class="gla-programs-card__buttons">
-            <button class="gla-programs-card__cta gla-programs-card__cta--apply" onclick="window.location.href='#enquire-now'" aria-label="Apply for Master of Computer Applications">Apply</button>
-            <button class="gla-programs-card__cta gla-programs-card__cta--knowmore" data-course="mca" aria-label="Know more about Master of Computer Applications">Know more</button>
-          </div>
-        </div>
-      </article>
-      
-      <!-- Card 3 - MBA -->
-      <article class="gla-programs-card" data-course="mba" aria-label="Master of Business Administration program">
-        <div class="gla-programs-card__image-wrapper">
-          <div class="gla-programs-card__image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop');"></div>
-          <div class="gla-programs-card__overlay"></div>
-        </div>
-        <div class="gla-programs-card__content">
-          <h3 class="gla-programs-card__title">Master of Business Administration</h3>
-          <p class="gla-programs-card__description">The Two-year Online MBA programme exposes students to industry and domain specialisations to match their passions. Our prime objective is to develop future qualified professionals through comprehensive curriculum.</p>
-          <div class="gla-programs-card__meta">
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">🎓</span>
-              <span class="gla-programs-card__meta-text">MBA</span>
-            </span>
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">📅</span>
-              <span class="gla-programs-card__meta-text">2 Years</span>
-            </span>
-          </div>
-          <span class="gla-programs-card__badge">10 Specializations</span>
-          <div class="gla-programs-card__buttons">
-            <button class="gla-programs-card__cta gla-programs-card__cta--apply" onclick="window.location.href='#enquire-now'" aria-label="Apply for Master of Business Administration">Apply</button>
-            <button class="gla-programs-card__cta gla-programs-card__cta--knowmore" data-course="mba" aria-label="Know more about Master of Business Administration">Know more</button>
-          </div>
-        </div>
-      </article>
-      
-      <!-- Card 4 - BBA -->
-      <article class="gla-programs-card" data-course="bba" aria-label="Bachelor of Business Administration program">
-        <div class="gla-programs-card__image-wrapper">
-          <div class="gla-programs-card__image" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=500&fit=crop');"></div>
-          <div class="gla-programs-card__overlay"></div>
-        </div>
-        <div class="gla-programs-card__content">
-          <h3 class="gla-programs-card__title">Bachelor of Business Administration</h3>
-          <p class="gla-programs-card__description">Discover the advantages of GLA University's Online BBA degree – a flexible and accessible path to business education. Master essential business skills and gain a competitive edge.</p>
-          <div class="gla-programs-card__meta">
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">🎓</span>
-              <span class="gla-programs-card__meta-text">BBA</span>
-            </span>
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">📅</span>
-              <span class="gla-programs-card__meta-text">3 Years</span>
-            </span>
-          </div>
-          <div class="gla-programs-card__buttons">
-            <button class="gla-programs-card__cta gla-programs-card__cta--apply" onclick="window.location.href='#enquire-now'" aria-label="Apply for Bachelor of Business Administration">Apply</button>
-            <button class="gla-programs-card__cta gla-programs-card__cta--knowmore" data-course="bba" aria-label="Know more about Bachelor of Business Administration">Know more</button>
-          </div>
-        </div>
-      </article>
-      
-      <!-- Card 5 - B. Com (Hons.) -->
-      <article class="gla-programs-card" data-course="bcom" aria-label="Bachelor of Commerce Honours program">
-        <div class="gla-programs-card__image-wrapper">
-          <div class="gla-programs-card__image" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop');"></div>
-          <div class="gla-programs-card__overlay"></div>
-        </div>
-        <div class="gla-programs-card__content">
-          <h3 class="gla-programs-card__title">Bachelor of Commerce (Honours)</h3>
-          <p class="gla-programs-card__description">Experience the flexibility of GLA University's Online B. Com (Hons.) degree, designed for a dynamic learning journey. Immerse yourself in a comprehensive curriculum, gaining practical skills in commerce.</p>
-          <div class="gla-programs-card__meta">
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">🎓</span>
-              <span class="gla-programs-card__meta-text">B. Com (Hons.)</span>
-            </span>
-            <span class="gla-programs-card__meta-item">
-              <span class="gla-programs-card__meta-icon">📅</span>
-              <span class="gla-programs-card__meta-text">3 Years</span>
-            </span>
-          </div>
-          <div class="gla-programs-card__buttons">
-            <button class="gla-programs-card__cta gla-programs-card__cta--apply" onclick="window.location.href='#enquire-now'" aria-label="Apply for Bachelor of Commerce Honours">Apply</button>
-            <button class="gla-programs-card__cta gla-programs-card__cta--knowmore" data-course="bcom" aria-label="Know more about Bachelor of Commerce Honours">Know more</button>
-          </div>
-        </div>
-      </article>
-    </div>
-    
-    <!-- Modal Dialog -->
-    <div class="gla-programs-modal" id="programModal" role="dialog" aria-labelledby="modalTitle" aria-modal="true" aria-hidden="true">
-      <div class="gla-programs-modal__overlay"></div>
-      <div class="gla-programs-modal__dialog">
-        <div class="gla-programs-modal__header">
-          <h2 class="gla-programs-modal__title" id="modalTitle"></h2>
-          <button class="gla-programs-modal__close" aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="gla-programs-modal__body">
-          <div class="gla-programs-modal__image-wrapper">
-            <div class="gla-programs-modal__image" id="modalImage"></div>
-          </div>
-          <div class="gla-programs-modal__details">
-            <div class="gla-programs-modal__meta-badges" id="modalMeta"></div>
-            <div class="gla-programs-modal__description" id="modalDescription"></div>
-            <div class="gla-programs-modal__specializations" id="modalSpecializations"></div>
+        <div class="gla-programs-dialog__details">
+          <h3 id="programTitle" class="gla-programs-dialog__title"></h3>
+
+          <div id="programMeta" class="gla-programs-dialog__meta"></div>
+
+          <p id="programDescription" class="gla-programs-dialog__description"></p>
+
+          <div id="programSpecs" class="gla-programs-dialog__specializations"></div>
+
+          <div class="gla-programs-dialog__actions">
+            <a href="#enquire-now" class="gla-programs-dialog__btn gla-programs-dialog__btn--primary">Apply Now</a>
+            <a href="#law-program" class="gla-programs-dialog__btn gla-programs-dialog__btn--secondary">Know more</a>
           </div>
         </div>
       </div>
@@ -351,6 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p> Through innovative online platforms, students can access world-class faculty, engaging coursework, and a vibrant learning community. GLA's dedication to fostering holistic growth ensures that online learners benefit not only from academic excellence but also personal development and career advancement opportunities. It's a gateway to a brighter future, empowering students to thrive in their chosen fields. </p>
   </div>
 </section>
+
 <section class="sec-padding-2">
   <div class="container" data-aos="fade-left">
     <h1 class="center">Why <span style="color:#ff8a00;">GLA Online</span></h1>
@@ -765,7 +683,7 @@ document.getElementById("defaultOpen").click();
                                                     document.body.appendChild(s);
                                                 </script>
 
-<!-- GLA Programs Modal JavaScript -->
+<!-- GLA Programs Tabs JavaScript -->
 <script>
 (function() {
   'use strict';
@@ -776,7 +694,6 @@ document.getElementById("defaultOpen").click();
       title: 'Bachelor of Computer Applications',
       degree: 'BCA',
       duration: '3 Years',
-      fee: '₹49,000',
       image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop',
       description: 'Embark on a transformative journey with GLA University\'s Online BCA degree. Dive into a comprehensive curriculum designed for the digital age, blending theoretical knowledge with practical skills. Access world-class education from the comfort of your space, fostering a dynamic learning experience. Elevate your future in the ever-evolving field of Computer Applications. Explore limitless possibilities with GLA\'s Online BCA program!',
       specializations: []
@@ -785,7 +702,6 @@ document.getElementById("defaultOpen").click();
       title: 'Master of Computer Applications',
       degree: 'MCA',
       duration: '2 Years',
-      fee: '₹49,000',
       image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop',
       description: 'Gain a competitive edge with GLA University\'s Online MCA degree, offering flexibility and convenience. Access world-class education, interactive virtual classrooms, and expert faculty. Tailor your learning experience to your schedule, honing practical skills in the ever-evolving field of Computer Applications. Elevate your career prospects with a versatile, industry-aligned curriculum from the comfort of your space.',
       specializations: []
@@ -794,7 +710,6 @@ document.getElementById("defaultOpen").click();
       title: 'Master of Business Administration',
       degree: 'MBA',
       duration: '2 Years',
-      fee: '₹49,000',
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop',
       description: 'The Two-year Online MBA programme exposes students to industry and domain specialisations to match their passions. Our prime objective is to develop future qualified professionals through a comprehensive two-year postgraduate degree programme in the below-given specialisations:',
       specializations: [
@@ -814,7 +729,6 @@ document.getElementById("defaultOpen").click();
       title: 'Bachelor of Business Administration',
       degree: 'BBA',
       duration: '3 Years',
-      fee: '₹49,000',
       image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=500&fit=crop',
       description: 'Discover the advantages of GLA University\'s Online BBA degree – a flexible and accessible path to business education. Tailor your learning experience, access expert faculty, and engage in dynamic virtual classrooms. Master essential business skills and gain a competitive edge while balancing your studies with personal commitments. Elevate your career potential with GLA\'s Online BBA program.',
       specializations: [
@@ -828,140 +742,138 @@ document.getElementById("defaultOpen").click();
       title: 'Bachelor of Commerce (Honours)',
       degree: 'B. Com (Hons.)',
       duration: '3 Years',
-      fee: '₹49,000',
       image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop',
       description: 'Experience the flexibility of GLA University\'s Online B. Com (Hons.) degree, designed for a dynamic learning journey. Access expert faculty, engage in virtual classrooms, and tailor your education to your schedule. Immerse yourself in a comprehensive curriculum, gaining practical skills in commerce. Elevate your career prospects while balancing your studies with the convenience of online learning.',
       specializations: []
     }
   };
   
-  // DOM elements
-  const modal = document.getElementById('programModal');
-  const modalOverlay = modal.querySelector('.gla-programs-modal__overlay');
-  const modalClose = modal.querySelector('.gla-programs-modal__close');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalImage = document.getElementById('modalImage');
-  const modalMeta = document.getElementById('modalMeta');
-  const modalDescription = document.getElementById('modalDescription');
-  const modalSpecializations = document.getElementById('modalSpecializations');
-  const knowMoreButtons = document.querySelectorAll('.gla-programs-card__cta--knowmore');
-  
-  // Focus trap elements
-  const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-  let firstFocusableElement, lastFocusableElement;
-  
-  // Open modal function
-  function openModal(courseKey) {
+  // DOM elements for tabs + dialog
+  const tabs = document.querySelectorAll('.gla-programs-tabs__tab');
+  const dialog = document.querySelector('.gla-programs-dialog');
+  const programImage = document.getElementById('programImage');
+  const programTitle = document.getElementById('programTitle');
+  const programMeta = document.getElementById('programMeta');
+  const programDescription = document.getElementById('programDescription');
+  const programSpecs = document.getElementById('programSpecs');
+
+  function renderCourse(courseKey) {
     const course = coursesData[courseKey];
     if (!course) return;
-    
-    // Populate modal content
-    modalTitle.textContent = course.title;
-    modalImage.style.backgroundImage = `url('${course.image}')`;
-    
-    // Meta badges
-    modalMeta.innerHTML = `
-      <div class="gla-programs-modal__meta-badge">
-        <span class="gla-programs-modal__meta-badge-icon">🎓</span>
-        <span>${course.degree}</span>
-      </div>
-      <div class="gla-programs-modal__meta-badge">
-        <span class="gla-programs-modal__meta-badge-icon">📅</span>
-        <span>${course.duration}</span>
-      </div>
-    `;
-    
-    // Description
-    modalDescription.textContent = course.description;
-    
-    // Specializations
-    if (course.specializations && course.specializations.length > 0) {
-      modalSpecializations.classList.add('has-specializations');
-      modalSpecializations.innerHTML = `
-        <h3 class="gla-programs-modal__specializations-title">Specializations</h3>
-        <div class="gla-programs-modal__specializations-list">
-          ${course.specializations.map(spec => 
-            `<span class="gla-programs-modal__specialization-badge">${spec}</span>`
-          ).join('')}
+
+    // Image
+    if (programImage) {
+      programImage.src = course.image;
+      programImage.alt = course.title;
+    }
+
+    // Title
+    if (programTitle) {
+      programTitle.textContent = course.title;
+    }
+
+    // Meta badges (degree, duration, fee)
+    if (programMeta) {
+      programMeta.innerHTML = `
+        <div class="gla-programs-dialog__meta-badge">
+          <span class="gla-programs-dialog__meta-icon">🎓</span>
+          <span>${course.degree}</span>
+        </div>
+        <div class="gla-programs-dialog__meta-badge">
+          <span class="gla-programs-dialog__meta-icon">📅</span>
+          <span>${course.duration}</span>
         </div>
       `;
-    } else {
-      modalSpecializations.classList.remove('has-specializations');
-      modalSpecializations.innerHTML = '';
     }
-    
-    // Show modal
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('modal-open');
-    
-    // Set focus trap
-    const focusableContent = modal.querySelectorAll(focusableElements);
-    firstFocusableElement = focusableContent[0];
-    lastFocusableElement = focusableContent[focusableContent.length - 1];
-    
-    // Focus on close button
-    setTimeout(() => {
-      modalClose.focus();
-    }, 100);
-  }
-  
-  // Close modal function
-  function closeModal() {
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('modal-open');
-    
-    // Return focus to the button that opened the modal
-    if (document.activeElement && document.activeElement.dataset.course) {
-      document.activeElement.focus();
+
+    // Description
+    if (programDescription) {
+      programDescription.textContent = course.description;
+    }
+
+    // Specializations
+    if (programSpecs) {
+      if (course.specializations && course.specializations.length > 0) {
+        programSpecs.classList.add('gla-programs-dialog__specializations--visible');
+        programSpecs.innerHTML = `
+          <h3 class="gla-programs-dialog__specializations-title">Specializations Available</h3>
+          <div class="gla-programs-dialog__specializations-list">
+            ${course.specializations
+              .map(
+                (spec) =>
+                  `<span class="gla-programs-dialog__specialization-pill">${spec}</span>`
+              )
+              .join('')}
+          </div>
+        `;
+      } else {
+        programSpecs.classList.remove('gla-programs-dialog__specializations--visible');
+        programSpecs.innerHTML = '';
+      }
+    }
+
+    if (dialog) {
+      dialog.style.opacity = 0;
+      dialog.style.transition = 'opacity 0.3s ease';
+      requestAnimationFrame(() => {
+        dialog.style.opacity = 1;
+      });
     }
   }
-  
-  // Event listeners for "Know More" buttons
-  knowMoreButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
-      const courseKey = this.dataset.course;
+
+  function setActiveTab(courseKey) {
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.course === courseKey;
+      tab.classList.toggle('gla-programs-tabs__tab--active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    const panel = document.getElementById('gla-programs-panel');
+    if (panel) {
+      panel.setAttribute(
+        'aria-labelledby',
+        `tab-${courseKey}`
+      );
+    }
+
+    renderCourse(courseKey);
+  }
+
+  // Tab click handling
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const courseKey = tab.dataset.course;
       if (courseKey) {
-        openModal(courseKey);
+        setActiveTab(courseKey);
+        history.replaceState(null, '', `#${courseKey}`);
+      }
+    });
+
+    // Keyboard navigation
+    tab.addEventListener('keydown', (e) => {
+      const currentIndex = Array.prototype.indexOf.call(tabs, tab);
+      let newIndex = currentIndex;
+
+      if (e.key === 'ArrowRight') {
+        newIndex = (currentIndex + 1) % tabs.length;
+        tabs[newIndex].focus();
+        e.preventDefault();
+      } else if (e.key === 'ArrowLeft') {
+        newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+        tabs[newIndex].focus();
+        e.preventDefault();
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        tab.click();
+        e.preventDefault();
       }
     });
   });
-  
-  // Close modal on overlay click
-  modalOverlay.addEventListener('click', closeModal);
-  
-  // Close modal on close button click
-  modalClose.addEventListener('click', closeModal);
-  
-  // Close modal on ESC key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
-    
-    // Focus trap - Tab key
-    if (e.key === 'Tab' && modal.classList.contains('active')) {
-      if (e.shiftKey) {
-        if (document.activeElement === firstFocusableElement) {
-          e.preventDefault();
-          lastFocusableElement.focus();
-        }
-      } else {
-        if (document.activeElement === lastFocusableElement) {
-          e.preventDefault();
-          firstFocusableElement.focus();
-        }
-      }
-    }
-  });
-  
-  
-  // Prevent modal from closing when clicking inside dialog
-  modal.querySelector('.gla-programs-modal__dialog').addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
+
+  // Initial state (check URL hash)
+  const hash = window.location.hash.replace('#', '');
+  const initialCourse =
+    hash && coursesData[hash] ? hash : 'bca';
+  setActiveTab(initialCourse);
 })();
 </script>
 </body>
