@@ -532,7 +532,7 @@ h1{
   position: relative;
   z-index: 3;
   grid-column: 1 / 9; /* Takes 8 columns (1 to 9) - 66.67% width */
-  padding: 0 40px 80px 0;
+  padding: 40px 40px 80px 0;
   display: flex;
   align-items: center;
 }
@@ -750,7 +750,7 @@ h1{
 
 /* About GLA Online & Digital Learnings Section */
 :root {
-  --gla-digital-bg: #fafbfc;
+  --gla-digital-bg: #eeeeee;
   --gla-digital-text-primary: #1a1a1a;
   --gla-digital-text-secondary: #666;
   --gla-digital-card-shadow: rgba(0, 0, 0, 0.06);
@@ -763,9 +763,9 @@ h1{
   width: 100%;
   /* max-width: 1200px; */
   background-color: var(--gla-digital-bg);
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  /* background-image: radial-gradient(circle, rgba(0, 0, 0, 0.3) 1px, transparent 1px); */
   background-size: 24px 24px;
-  padding: 80px 20px;
+  padding: 50px 20px;
   position: relative;
 }
 
