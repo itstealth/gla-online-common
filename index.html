@@ -70,7 +70,9 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<!-- GLA Hero Section - Enhanced Version -->
+
+
+<!-- GLA Hero Section - Mobile Optimized -->
 <section class="gla-hero-section">
   <div class="gla-gradient-overlay"></div>
   <div class="gla-hero-container">
@@ -141,7 +143,7 @@
 <!-- GLA Hero Section - End -->
 
 <style>
-/* Enhanced GLA Hero Section with Better Readability */
+/* Enhanced GLA Hero Section - Mobile Optimized */
 .gla-hero-section {
   position: relative;
   width: 100%;
@@ -156,7 +158,7 @@
   padding: 40px 20px;
 }
 
-/* Subtle gradient overlay for better text readability */
+/* Gradient overlay for readability */
 .gla-gradient-overlay {
   position: absolute;
   top: 0;
@@ -544,7 +546,7 @@
   }
 }
 
-/* Responsive Design */
+/* Responsive Design - Optimized for Mobile */
 @media (max-width: 1024px) {
   .gla-hero-section {
     height: 550px;
@@ -579,148 +581,281 @@
   }
 }
 
+/* Mobile Optimization - Clean & Spacious */
 @media (max-width: 768px) {
   .gla-hero-section {
-    height: 500px;
-    padding: 30px 15px;
+    height: auto;
+    min-height: 520px;
+    padding: 35px 20px;
   }
 
   .gla-gradient-overlay {
     background: linear-gradient(
-      100deg,
-      rgba(17, 24, 39, 0.85) 0%,
-      rgba(17, 24, 39, 0.75) 40%,
-      rgba(17, 24, 39, 0.60) 70%,
-      rgba(17, 24, 39, 0.40) 100%
+      to bottom,
+      rgba(17, 24, 39, 0.88) 0%,
+      rgba(17, 24, 39, 0.82) 50%,
+      rgba(17, 24, 39, 0.75) 100%
     );
   }
 
   .gla-hero-container {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   .gla-tagline {
-    font-size: 0.7rem;
-    padding: 7px 16px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.6rem;
+    padding: 6px 14px;
+    gap: 6px;
+    margin-bottom: 14px;
+    letter-spacing: 1.5px;
   }
 
   .gla-tagline-icon {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
   }
 
   .gla-hero-title {
-    font-size: 1.6rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
   }
 
   .gla-hero-highlight {
-    font-size: 2.2rem;
+    font-size: 1.75rem;
+    margin: 4px 0;
+    line-height: 1.15;
   }
 
   .gla-from-text {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+
+  .gla-logo-wrapper {
+    margin: 10px auto 16px auto;
+    text-align: center;
   }
 
   .gla-logo-text {
-    font-size: 3.2rem;
-    letter-spacing: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    text-align: center;
   }
 
   .gla-logo-underline {
-    width: 140px;
+    width: 100px;
+    height: 3px;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .gla-badges-container {
-    gap: 12px;
-    margin: 18px 0;
+    gap: 10px;
+    margin: 16px 0;
   }
 
   .gla-badge {
-    padding: 10px 18px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 0;
   }
 
   .gla-badge-icon {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
   }
 
   .gla-badge-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .gla-badge-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
   }
 
   .gla-badge-value {
-    font-size: 0.9rem;
-  }
-
-  .gla-programs-container {
-    gap: 10px;
-    margin: 18px 0;
-  }
-
-  .gla-program-tag {
-    padding: 7px 18px;
-    font-size: 1.1rem;
-  }
-
-  .gla-explore-btn {
-    padding: 14px 36px;
-    font-size: 0.9rem;
-    margin-top: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gla-hero-section {
-    height: 480px;
-  }
-
-  .gla-gradient-overlay {
-    background: rgba(17, 24, 39, 0.80);
-  }
-
-  .gla-hero-title {
-    font-size: 1.4rem;
-  }
-
-  .gla-hero-highlight {
-    font-size: 1.9rem;
-  }
-
-  .gla-from-text {
-    font-size: 1.1rem;
-  }
-
-  .gla-logo-text {
-    font-size: 2.6rem;
-    letter-spacing: 8px;
-  }
-
-  .gla-logo-underline {
-    width: 110px;
-  }
-
-  .gla-badges-container {
-    flex-direction: column;
-    gap: 10px;
+    font-size: 0.75rem;
   }
 
   .gla-programs-container {
     gap: 8px;
+    margin: 16px 0;
+    justify-content: flex-start;
   }
 
   .gla-program-tag {
-    padding: 6px 16px;
-    font-size: 1rem;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+
+  .gla-explore-btn {
+    padding: 12px 32px;
+    font-size: 0.8rem;
+    margin-top: 16px;
+    letter-spacing: 1.2px;
+  }
+
+  .gla-btn-arrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Extra Small Mobile - Ultra Compact */
+@media (max-width: 480px) {
+  .gla-hero-section {
+    min-height: 480px;
+    padding: 30px 16px;
+  }
+
+  .gla-gradient-overlay {
+    background: rgba(17, 24, 39, 0.85);
+  }
+
+  .gla-hero-container {
+    padding: 0 12px;
+  }
+
+  .gla-tagline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.55rem;
+    padding: 5px 12px;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+
+  .gla-tagline-icon {
+    width: 11px;
+    height: 11px;
+  }
+
+  .gla-hero-title {
+    font-size: 1.1rem;
+  }
+
+  .gla-hero-highlight {
+    font-size: 1.5rem;
+    margin: 3px 0;
+  }
+
+  .gla-from-text {
+    font-size: 0.85rem;
+  }
+
+  .gla-logo-wrapper {
+    margin: 8px 0 14px 0;
+  }
+
+  .gla-logo-text {
+    font-size: 2.1rem;
+    letter-spacing: 6px;
+  }
+
+  .gla-logo-underline {
+    width: 85px;
+    height: 3px;
+    margin-top: 5px;
+  }
+
+  .gla-badges-container {
+    gap: 8px;
+    margin: 14px 0;
+  }
+
+  .gla-badge {
+    padding: 7px 12px;
+    gap: 10px;
+  }
+
+  .gla-badge-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .gla-badge-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .gla-badge-label {
+    font-size: 0.52rem;
+  }
+
+  .gla-badge-value {
+    font-size: 0.7rem;
+  }
+
+  .gla-programs-container {
+    gap: 7px;
+    margin: 14px 0;
+  }
+
+  .gla-program-tag {
+    padding: 5px 12px;
+    font-size: 0.78rem;
   }
 
   .gla-explore-btn {
     width: 100%;
     justify-content: center;
-    padding: 14px 32px;
+    padding: 11px 28px;
+    font-size: 0.75rem;
+    margin-top: 14px;
+  }
+
+  .gla-btn-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 768px) and (max-height: 500px) {
+  .gla-hero-section {
+    min-height: 420px;
+    padding: 25px 15px;
+  }
+
+  .gla-tagline {
+    margin-bottom: 10px;
+  }
+
+  .gla-logo-wrapper {
+    margin: 6px 0 12px 0;
+  }
+
+  .gla-badges-container {
+    margin: 12px 0;
+  }
+
+  .gla-programs-container {
+    margin: 12px 0;
+  }
+
+  .gla-explore-btn {
+    margin-top: 12px;
   }
 }
 </style>
+
 
   
   <!-- <section class="hero-section">
