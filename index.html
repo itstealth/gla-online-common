@@ -669,6 +669,216 @@
 
 }
 
+/* UNPARALLELED BENCHMARKS Section */
+.benchmarks-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.benchmarks-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff8a00, #f6393f, #ff8a00);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.benchmarks-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.benchmarks-subtitle {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+  margin-top: 8px;
+  text-transform: none;
+  letter-spacing: 2px;
+}
+
+.benchmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+}
+
+.benchmark-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.benchmark-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 138, 0, 0.1), rgba(246, 57, 63, 0.1));
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.benchmark-card:hover::before {
+  left: 0;
+}
+
+.benchmark-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(255, 138, 0, 0.2);
+  border-color: #ff8a00;
+}
+
+.benchmark-icon {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.benchmark-card:hover .benchmark-icon {
+  animation: iconPulse 0.6s ease;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.benchmark-number {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff8a00 0%, #f6393f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.benchmark-symbol {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff8a00;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.benchmark-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 15px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design for Benchmarks */
+@media (max-width: 768px) {
+  .benchmarks-section {
+    padding: 60px 15px;
+  }
+  
+  .benchmarks-heading {
+    font-size: 1.8rem;
+  }
+  
+  .benchmarks-subtitle {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  .benchmarks-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 40px;
+  }
+  
+  .benchmark-card {
+    padding: 30px 20px;
+  }
+  
+  .benchmark-number {
+    font-size: 3rem;
+  }
+  
+  .benchmark-symbol {
+    font-size: 2rem;
+  }
+  
+  .benchmark-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benchmarks-heading {
+    font-size: 1.5rem;
+  }
+  
+  .benchmark-number {
+    font-size: 2.5rem;
+  }
+  
+  .benchmark-symbol {
+    font-size: 1.5rem;
+  }
+}
+
 /* GLA Features Section */
 .gla-features-section {
   background: #000000;
@@ -1505,8 +1715,109 @@
     </div>
 
   </div>
-</section>
-
+  </section>
+  
+  <!-- UNPARALLELED BENCHMARKS Section -->
+  <section class="benchmarks-section">
+    <div class="container">
+      <h2 class="benchmarks-heading" data-aos="fade-up">
+        UNPARALLELED BENCHMARKS <span class="benchmarks-subtitle">Created by GLA</span>
+      </h2>
+      <div class="benchmarks-grid">
+        <div class="benchmark-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="benchmark-icon">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="28" stroke="url(#gradient1)" stroke-width="3" fill="none"/>
+              <path d="M20 30 L27 37 L40 23" stroke="url(#gradient1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#ff8a00;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#f6393f;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="benchmark-number" data-target="86">0</div>
+          <div class="benchmark-symbol">%</div>
+          <div class="benchmark-label">Overall Placement in Last 5 Years</div>
+        </div>
+        
+        <div class="benchmark-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="benchmark-icon">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="28" stroke="url(#gradient1)" stroke-width="3" fill="none"/>
+              <!-- Graduation cap -->
+              <path d="M30 18L15 24L30 30L45 24L30 18Z" stroke="url(#gradient1)" stroke-width="3" fill="none" stroke-linejoin="round"/>
+              <path d="M21 27V33L30 37L39 33V27" stroke="url(#gradient1)" stroke-width="3" fill="none" stroke-linejoin="round"/>
+              <line x1="45" y1="24" x2="45" y2="38" stroke="url(#gradient1)" stroke-width="3" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#ff8a00;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#f6393f;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="benchmark-number" data-target="46">0</div>
+          <div class="benchmark-symbol">k+</div>
+          <div class="benchmark-label">Alumni Across the Globe</div>
+        </div>
+        
+        <div class="benchmark-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="benchmark-icon">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="28" stroke="url(#gradient2)" stroke-width="3" fill="none"/>
+              <!-- Three people -->
+              <circle cx="22" cy="24" r="4" stroke="url(#gradient2)" stroke-width="3" fill="none"/>
+              <path d="M14 40C14 35 17 32 22 32C27 32 30 35 30 40" stroke="url(#gradient2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+              
+              <circle cx="38" cy="24" r="4" stroke="url(#gradient2)" stroke-width="3" fill="none"/>
+              <path d="M30 40C30 35 33 32 38 32C43 32 46 35 46 40" stroke="url(#gradient2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+              
+              <circle cx="30" cy="18" r="4" stroke="url(#gradient2)" stroke-width="3" fill="none"/>
+              <defs>
+                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#ff8a00;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#f6393f;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="benchmark-number" data-target="23">0</div>
+          <div class="benchmark-symbol">k+</div>
+          <div class="benchmark-label">Students Enrolled in Different Courses</div>
+        </div>
+        
+        <div class="benchmark-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="benchmark-icon">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="28" stroke="url(#gradient-f5)" stroke-width="3" fill="none"/>
+              <!-- Certificate -->
+              <rect x="14" y="18" width="32" height="24" rx="1" stroke="url(#gradient-f5)" stroke-width="3" fill="none"/>
+              <!-- Lines on certificate -->
+              <line x1="18" y1="24" x2="42" y2="24" stroke="url(#gradient-f5)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="18" y1="28" x2="42" y2="28" stroke="url(#gradient-f5)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="18" y1="32" x2="36" y2="32" stroke="url(#gradient-f5)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Ribbon -->
+              <circle cx="38" cy="38" r="4" stroke="url(#gradient-f5)" stroke-width="3" fill="none"/>
+              <line x1="38" y1="42" x2="36" y2="46" stroke="url(#gradient-f5)" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="42" x2="40" y2="46" stroke="url(#gradient-f5)" stroke-width="2" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="gradient-f5" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#ff8a00;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#f6393f;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="benchmark-number" data-target="650">0</div>
+          <div class="benchmark-symbol">+</div>
+          <div class="benchmark-label">Faculty Members from Global Institutions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 <!-- journey section -->
   <section class="sec-padding-2 map">
     <div class="container">
@@ -1871,8 +2182,48 @@
         const container = document.querySelector('.ts-scope .container');
         container.addEventListener('mouseenter', stopAutoScroll);
         container.addEventListener('mouseleave', startAutoScroll);
-    })();
-</script>
+     })();
+ </script>
+ 
+ <script>
+   // Number Counter Animation for Benchmarks
+   (function() {
+     const observerOptions = {
+       threshold: 0.5,
+       rootMargin: '0px'
+     };
+     
+     const observer = new IntersectionObserver(function(entries) {
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           const numberElement = entry.target;
+           const target = parseInt(numberElement.getAttribute('data-target'));
+           const duration = 2000; // 2 seconds
+           const increment = target / (duration / 16); // 60fps
+           let current = 0;
+           
+           const updateNumber = () => {
+             current += increment;
+             if (current < target) {
+               numberElement.textContent = Math.floor(current);
+               requestAnimationFrame(updateNumber);
+             } else {
+               numberElement.textContent = target;
+             }
+           };
+           
+           updateNumber();
+           observer.unobserve(numberElement);
+         }
+       });
+     }, observerOptions);
+     
+     // Observe all benchmark numbers
+     document.querySelectorAll('.benchmark-number').forEach(el => {
+       observer.observe(el);
+     });
+   })();
+ </script>
 </body>
 
 </html>
