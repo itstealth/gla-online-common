@@ -2803,6 +2803,422 @@ body.modal-open {
     border: none;
   }
 }
+
+/* Who Should Enroll Section */
+.who-should-enroll-section {
+  width: 100%;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(247, 94, 43, 0.08) 0%, rgba(255, 138, 0, 0.08) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.who-should-enroll-card {
+  max-width: 1200px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 60px 70px;
+  display: flex;
+  gap: 70px;
+  align-items: flex-start;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  animation: slideInScale 0.6s ease-out 0.2s both;
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.who-should-enroll-left {
+  flex: 1;
+  max-width: 45%;
+  animation: fadeInLeft 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.who-should-enroll-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.who-should-icon {
+  width: 20px;
+  height: 20px;
+  color: #f75e2b;
+  animation: rotateIcon 3s linear infinite;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.who-should-label {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f75e2b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.who-should-heading {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 0 0 30px 0;
+  line-height: 1.1;
+  animation: slideInDown 0.6s ease-out 0.5s both;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.who-should-description {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  color: #4a4a4a;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.who-should-cta-btn {
+  background: linear-gradient(135deg, #f75e2b 0%, #ff8a00 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 40px;
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(247, 94, 43, 0.3);
+  animation: bounceIn 0.8s ease-out 0.8s both;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.who-should-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.who-should-cta-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.who-should-cta-btn:hover {
+  background: linear-gradient(135deg, #ff8a00 0%, #f75e2b 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(247, 94, 43, 0.4);
+}
+
+.who-should-enroll-right {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  gap: 50px;
+  animation: fadeInRight 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.who-should-list-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.who-should-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  opacity: 0;
+  animation: slideInItem 0.6s ease-out forwards;
+}
+
+.who-should-list-column:nth-child(1) .who-should-list-item:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.who-should-list-column:nth-child(1) .who-should-list-item:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.who-should-list-column:nth-child(1) .who-should-list-item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.who-should-list-column:nth-child(2) .who-should-list-item:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.who-should-list-column:nth-child(2) .who-should-list-item:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+@keyframes slideInItem {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.who-should-bullet {
+  width: 5px;
+  height: auto;
+  min-height: 24px;
+  align-self: stretch;
+  background: linear-gradient(135deg, #f75e2b 0%, #ff8a00 100%);
+  border-radius: 3px;
+  flex-shrink: 0;
+  animation: bulletGrow 0.5s ease-out forwards;
+  transform-origin: top;
+}
+
+@keyframes bulletGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.who-should-list-item:hover .who-should-bullet {
+  animation: bulletPulse 0.6s ease-in-out;
+}
+
+@keyframes bulletPulse {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+}
+
+.who-should-list-item span {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.who-should-list-item:hover span {
+  color: #f75e2b;
+  transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .who-should-enroll-card {
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 60px;
+  }
+
+  .who-should-enroll-left,
+  .who-should-enroll-right {
+    max-width: 100%;
+  }
+
+  .who-should-enroll-right {
+    gap: 40px;
+  }
+
+  .who-should-heading {
+    font-size: 60px;
+  }
+
+  .who-should-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-should-enroll-section {
+    padding: 40px 20px;
+  }
+
+  .who-should-enroll-card {
+    padding: 40px 35px;
+    border-radius: 20px;
+    gap: 40px;
+  }
+
+  .who-should-heading {
+    font-size: 48px;
+  }
+
+  .who-should-description {
+    font-size: 17px;
+  }
+
+  .who-should-label {
+    font-size: 16px;
+  }
+
+  .who-should-cta-btn {
+    padding: 18px 45px;
+    font-size: 17px;
+  }
+
+  .who-should-enroll-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .who-should-list-column {
+    gap: 22px;
+  }
+
+  .who-should-list-item span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .who-should-enroll-section {
+    padding: 40px 15px;
+  }
+
+  .who-should-enroll-card {
+    padding: 35px 25px;
+    gap: 35px;
+  }
+
+  .who-should-heading {
+    font-size: 42px;
+  }
+
+  .who-should-description {
+    font-size: 16px;
+  }
+
+  .who-should-label {
+    font-size: 14px;
+  }
+
+  .who-should-cta-btn {
+    padding: 16px 40px;
+    font-size: 16px;
+  }
+
+  .who-should-list-item span {
+    font-size: 15px;
+  }
+}
 /* career section */
 
 

@@ -1401,6 +1401,54 @@
     </div>
 </section>
 
+  <!-- Who Should Enroll Section -->
+  <section class="who-should-enroll-section">
+    <div class="who-should-enroll-card">
+      <div class="who-should-enroll-left">
+        <div class="who-should-enroll-header">
+          <svg class="who-should-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+            <path d="M22 2l-7 7"/>
+          </svg>
+          <span class="who-should-label">Who Should</span>
+        </div>
+        <h2 class="who-should-heading">ENROLL?</h2>
+        <p class="who-should-description">Whether you seek flexibility, a salary boost, or a leadership position, you've found the perfect opportunity.</p>
+        <button class="who-should-cta-btn" onclick="scrollToTop()">Enroll Now</button>
+      </div>
+      
+      <div class="who-should-enroll-right">
+        <div class="who-should-list-column">
+          <div class="who-should-list-item">
+            <div class="who-should-bullet"></div>
+            <span>Professionals seeking to increase their earning potential</span>
+          </div>
+          <div class="who-should-list-item">
+            <div class="who-should-bullet"></div>
+            <span>Individuals preferring flexible online learning from home</span>
+          </div>
+          <div class="who-should-list-item">
+            <div class="who-should-bullet"></div>
+            <span>Career changers aiming for leadership positions or starting their own business</span>
+          </div>
+        </div>
+        
+        <div class="who-should-list-column">
+          <div class="who-should-list-item">
+            <div class="who-should-bullet"></div>
+            <span>Those pursuing comprehensive professional development</span>
+          </div>
+          <div class="who-should-list-item">
+            <div class="who-should-bullet"></div>
+            <span>Learners with limited time availability and financial resources</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec-padding-2 map">
     <div class="container">
       <h1 class="center">Your Journey at a <br>
@@ -1715,6 +1763,14 @@
         hash && coursesData[hash] ? hash : 'bca';
       setActiveTab(initialCourse);
     })();
+
+    // Smooth scroll to top function
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   </script>
 </body>
 
