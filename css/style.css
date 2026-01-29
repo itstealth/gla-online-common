@@ -3705,6 +3705,11 @@ body.modal-open {
     padding: 25px 20px;
     font-size: 15px;
     min-height: 130px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .ts-scope .quotes {
@@ -3722,6 +3727,12 @@ body.modal-open {
 
   .ts-scope h6 {
     font-size: 13px;
+  }
+  
+  .ts-scope .ts-content-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
   }
 }
 
@@ -3743,6 +3754,12 @@ body.modal-open {
     padding: 20px 15px;
     font-size: 14px;
     min-height: 120px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    overflow: hidden;
+    line-height: 1.5;
   }
 
   .ts-scope blockquote:after {
@@ -3767,6 +3784,10 @@ body.modal-open {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+    padding: 0 5px;
   }
 
   .ts-scope img {

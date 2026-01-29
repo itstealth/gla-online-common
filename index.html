@@ -1690,7 +1690,7 @@
     <div class="four slide">
       <blockquote>
         <span class="leftq quotes">"</span>
-        GLA Online's MBA program was a game-changer for me! The flexible schedule allowed me to balance my job while gaining invaluable insights into business management. The interactive sessions, expert faculty, and real-world case studies enhanced my skills and confidence. The support system, from doubt-clearing to career guidance, was exceptional. Today, I apply the knowledge and leadership skills gained here in my professional life. I'm proud to be an alumnus of GLA Online!
+        GLA Online's MBA program was a game-changer for me! The flexible schedule allowed me to balance my job while gaining invaluable insights into business management. The interactive sessions, expert faculty, and real-world case studies enhanced my skills and confidence. The support system, from doubt-clearing to career guidance, was exceptional. 
         <span class="rightq quotes">„</span>
       </blockquote>
 
@@ -1706,7 +1706,7 @@
     <div class="five slide">
       <blockquote>
         <span class="leftq quotes">"</span>
-        GLA Online provided a transformative experience through its Online MBA program. The flexible learning environment, industry-relevant curriculum, and exceptional faculty support made it possible for me to balance work and studies seamlessly. The interactive sessions and real-world case studies enhanced my managerial skills and broadened my career horizons. GLA Online truly empowered me with knowledge and confidence, paving the way for professional growth. I'm proud to be an alumna of this esteemed institution!
+        GLA Online provided a transformative experience through its Online MBA program. The flexible learning environment, industry-relevant curriculum, and exceptional faculty support made it possible for me to balance work and studies seamlessly. The interactive sessions and real-world case studies enhanced my managerial skills and broadened my career horizons. 
         <span class="rightq quotes">„</span>
       </blockquote>
 
@@ -2154,23 +2154,36 @@
         const radioInputs = ['first', 'second', 'third', 'fourth', 'fifth'];
         let currentIndex = 0;
         const intervalTime = 5000; // 5 seconds per slide
-        let autoScrollInterval;
+        let autoScrollInterval = null;
+        let isPaused = false;
 
         function goToNextSlide() {
+            if (isPaused) return;
             currentIndex = (currentIndex + 1) % radioInputs.length;
             document.getElementById(radioInputs[currentIndex]).checked = true;
         }
 
         function startAutoScroll() {
+            // Clear any existing interval first
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+            }
+            isPaused = false;
             autoScrollInterval = setInterval(goToNextSlide, intervalTime);
         }
 
         function stopAutoScroll() {
-            clearInterval(autoScrollInterval);
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+            isPaused = true;
         }
 
-        // Start auto scroll on page load
-        startAutoScroll();
+        // Start auto scroll on page load with a small delay
+        setTimeout(function() {
+            startAutoScroll();
+        }, 1000);
 
         // Stop auto scroll when user clicks on a dot
         const labels = document.querySelectorAll('.ts-scope label');
@@ -2179,14 +2192,23 @@
                 stopAutoScroll();
                 currentIndex = index;
                 // Restart auto scroll after 10 seconds of user interaction
-                setTimeout(startAutoScroll, 10000);
+                setTimeout(function() {
+                    startAutoScroll();
+                }, 10000);
             });
         });
 
         // Pause auto scroll on hover
         const container = document.querySelector('.ts-scope .container');
-        container.addEventListener('mouseenter', stopAutoScroll);
-        container.addEventListener('mouseleave', startAutoScroll);
+        if (container) {
+            container.addEventListener('mouseenter', stopAutoScroll);
+            container.addEventListener('mouseleave', function() {
+                // Small delay before restarting to prevent rapid scrolling
+                setTimeout(function() {
+                    startAutoScroll();
+                }, 500);
+            });
+        }
      })();
  </script>
  
