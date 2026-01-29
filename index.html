@@ -77,13 +77,9 @@
   <div class="gla-gradient-overlay"></div>
   <div class="gla-hero-container">
     <div class="gla-hero-content">
-      <div class="gla-tagline">
-        <svg class="gla-tagline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-        </svg>
-        TRANSFORM YOUR FUTURE
+      <div class="gla-hero-logo-top">
+        <img src="images/logo.png" alt="GLA University" class="gla-hero-logo-image">
       </div>
-      
       <h1 class="gla-hero-title">
         Advance your career with
         <span class="gla-hero-highlight">Online Degrees</span>
@@ -130,13 +126,6 @@
         <span class="gla-program-tag">BCA</span>
         <span class="gla-program-tag">B.Com</span>
       </div>
-
-      <button class="gla-explore-btn">
-        <span>EXPLORE PROGRAMS</span>
-        <svg class="gla-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-          <path d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-        </svg>
-      </button>
     </div>
   </div>
 </section>
@@ -190,44 +179,6 @@
   animation: glaFadeSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.gla-tagline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #111827;
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  padding: 8px 20px;
-  border-radius: 25px;
-  margin-bottom: 18px;
-  box-shadow: 
-    0 4px 20px rgba(251, 191, 36, 0.5),
-    0 0 0 3px rgba(251, 191, 36, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.gla-tagline::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transform: rotate(45deg);
-  animation: glaShine 3s infinite;
-}
-
-.gla-tagline-icon {
-  width: 16px;
-  height: 16px;
-  color: #111827;
-  animation: glaPulseIcon 2s ease-in-out infinite;
-}
 
 .gla-hero-title {
   font-size: 2rem;
@@ -274,11 +225,27 @@
   margin: 15px 0 22px 0;
 }
 
+.gla-hero-logo-top {
+  display: inline-flex;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: auto;
+}
+
+.gla-hero-logo-image {
+  max-width: 180px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
 .gla-logo-text {
   font-size: 4.5rem;
   font-weight: 900;
   color: #ffffff;
-  letter-spacing: 16px;
+  letter-spacing: 4px;
   text-transform: uppercase;
   text-shadow: 
     0 0 30px rgba(255, 255, 255, 0.5),
@@ -308,41 +275,42 @@
 .gla-badge {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.98);
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.95), rgba(245, 158, 11, 0.95));
   backdrop-filter: blur(12px);
-  padding: 12px 22px;
-  border-radius: 14px;
+  padding: 10px 18px;
+  border-radius: 8px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.3);
-  border: 2px solid transparent;
+    0 4px 15px rgba(251, 191, 36, 0.4),
+    0 0 0 2px rgba(251, 191, 36, 0.2);
+  border: 2px solid rgba(251, 191, 36, 0.5);
 }
 
 .gla-badge:hover {
-  transform: translateY(-4px) scale(1.03);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 
-    0 8px 30px rgba(0, 0, 0, 0.35),
+    0 6px 20px rgba(251, 191, 36, 0.5),
     0 0 0 3px rgba(251, 191, 36, 0.3);
-  border-color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.8);
 }
 
 .gla-badge-icon {
-  width: 38px;
-  height: 38px;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: #1f2937;
-  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+  color: #f59e0b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .gla-badge-icon-ugc {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: rgba(255, 255, 255, 0.9);
+  color: #f59e0b;
 }
 
 .gla-badge-icon svg {
@@ -357,15 +325,15 @@
 }
 
 .gla-badge-label {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 800;
-  color: #6b7280;
+  color: #111827;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
 }
 
 .gla-badge-value {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 900;
   color: #111827;
   line-height: 1.1;
@@ -420,65 +388,6 @@
   border-color: #fbbf24;
 }
 
-.gla-explore-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 22px;
-  padding: 16px 40px;
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-  color: #111827;
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 
-    0 8px 30px rgba(251, 191, 36, 0.6),
-    0 0 0 0 rgba(251, 191, 36, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.gla-explore-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-  transition: left 0.6s;
-}
-
-.gla-explore-btn:hover::before {
-  left: 100%;
-}
-
-.gla-explore-btn:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 
-    0 12px 45px rgba(251, 191, 36, 0.8),
-    0 0 0 8px rgba(251, 191, 36, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.gla-explore-btn:active {
-  transform: translateY(-3px) scale(1.01);
-}
-
-.gla-btn-arrow {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.3s ease;
-}
-
-.gla-explore-btn:hover .gla-btn-arrow {
-  transform: translateX(6px);
-}
 
 /* Animations */
 @keyframes glaFadeSlideIn {
@@ -526,25 +435,6 @@
   }
 }
 
-@keyframes glaShine {
-  0% {
-    top: -50%;
-    right: -50%;
-  }
-  100% {
-    top: 150%;
-    right: 150%;
-  }
-}
-
-@keyframes glaPulseIcon {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
 
 /* Responsive Design - Optimized for Mobile */
 @media (max-width: 1024px) {
@@ -575,9 +465,17 @@
     font-size: 1.3rem;
   }
 
+  .gla-hero-logo-top {
+    margin-bottom: 20px;
+  }
+
+  .gla-hero-logo-image {
+    max-width: 150px;
+  }
+
   .gla-logo-text {
     font-size: 3.8rem;
-    letter-spacing: 12px;
+    letter-spacing: 3px;
   }
 }
 
@@ -602,23 +500,10 @@
     padding: 0 15px;
   }
 
-  .gla-tagline {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    align-self: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.6rem;
-    padding: 6px 14px;
-    gap: 6px;
-    margin-bottom: 14px;
-    letter-spacing: 1.5px;
-  }
-
-  .gla-tagline-icon {
-    width: 12px;
-    height: 12px;
+  .gla-hero-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .gla-hero-title {
@@ -643,9 +528,20 @@
     text-align: center;
   }
 
+  .gla-hero-logo-top {
+    margin-bottom: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .gla-hero-logo-image {
+    max-width: 120px;
+  }
+
   .gla-logo-text {
     font-size: 2.5rem;
-    letter-spacing: 8px;
+    letter-spacing: 2px;
     text-align: center;
   }
 
@@ -663,16 +559,17 @@
   }
 
   .gla-badge {
-    padding: 8px 14px;
-    border-radius: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
     flex: 1;
     min-width: 0;
+    gap: 8px;
   }
 
   .gla-badge-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
   }
 
   .gla-badge-icon svg {
@@ -701,17 +598,6 @@
     border-radius: 8px;
   }
 
-  .gla-explore-btn {
-    padding: 12px 32px;
-    font-size: 0.8rem;
-    margin-top: 16px;
-    letter-spacing: 1.2px;
-  }
-
-  .gla-btn-arrow {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 /* Extra Small Mobile - Ultra Compact */
@@ -727,24 +613,6 @@
 
   .gla-hero-container {
     padding: 0 12px;
-  }
-
-  .gla-tagline {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    align-self: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.55rem;
-    padding: 5px 12px;
-    gap: 5px;
-    margin-bottom: 12px;
-  }
-
-  .gla-tagline-icon {
-    width: 11px;
-    height: 11px;
   }
 
   .gla-hero-title {
@@ -764,9 +632,20 @@
     margin: 8px 0 14px 0;
   }
 
+  .gla-hero-logo-top {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .gla-hero-logo-image {
+    max-width: 100px;
+  }
+
   .gla-logo-text {
     font-size: 2.1rem;
-    letter-spacing: 6px;
+    letter-spacing: 1.5px;
   }
 
   .gla-logo-underline {
@@ -781,13 +660,13 @@
   }
 
   .gla-badge {
-    padding: 7px 12px;
-    gap: 10px;
+    padding: 7px 10px;
+    gap: 8px;
   }
 
   .gla-badge-icon {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
   }
 
   .gla-badge-icon svg {
@@ -813,18 +692,6 @@
     font-size: 0.78rem;
   }
 
-  .gla-explore-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 11px 28px;
-    font-size: 0.75rem;
-    margin-top: 14px;
-  }
-
-  .gla-btn-arrow {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 /* Landscape Mobile Optimization */
@@ -832,10 +699,6 @@
   .gla-hero-section {
     min-height: 420px;
     padding: 25px 15px;
-  }
-
-  .gla-tagline {
-    margin-bottom: 10px;
   }
 
   .gla-logo-wrapper {
@@ -850,9 +713,6 @@
     margin: 12px 0;
   }
 
-  .gla-explore-btn {
-    margin-top: 12px;
-  }
 }
 </style>
 
@@ -922,10 +782,7 @@
             balancing their professional and personal commitments. With a determination to quality education, GLA Online
             offers a diverse range of UGC entitled/ recognized undergraduate and postgraduate, all meticulously designed
             to meet the evolving needs of today's learners.
-            Through innovative online platforms, students can access world-class faculty, engaging coursework, and a
-            vibrant learning community. GLA's dedication to fostering holistic growth ensures that online learners
-            benefit not only from academic excellence but also personal development and career advancement
-            opportunities. It's a gateway to a brighter future, empowering students to thrive in their chosen fields.
+         
           </p>
 
           <div class="smu-stats-grid">
