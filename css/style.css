@@ -3470,10 +3470,18 @@ body.modal-open {
 
 
 /* Testimonial Section */
+/* Testimonial Section */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.ts-scope * {
+  box-sizing: border-box;
+}
+
 .ts-scope {
+  font: normal 1em/1.5 "Open Sans";
   width: 100%;
-  padding: 80px 40px;
-  background: #f5f5f5;
+  padding: 50px 40px;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3483,20 +3491,22 @@ body.modal-open {
   text-align: center;
   font-size: 42px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #02303F;
   margin: 0 0 50px 0;
   text-shadow: 0 1px white;
 }
 
 .ts-scope .container {
-  width: 500px;
-  min-height: 315px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 30px;
-  overflow: hidden;
+  padding-bottom: 60px;
+  overflow: visible;
 }
 
+/* Hide radio inputs */
 .ts-scope input[type="radio"] {
   position: absolute;
   width: 1px;
@@ -3506,112 +3516,130 @@ body.modal-open {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  opacity: 0;
 }
 
+/* Dots container - FIXED POSITIONING */
+.ts-scope .ts-tabs-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+/* Dots styling */
 .ts-scope label {
   display: block;
-  width: 32%;
-  border: 4px solid #ccc;
-  position: absolute;
-  bottom: 5px;
-  cursor: pointer;
-  transition: all 0.3s linear;
-  background: #ccc;
+  width: 12px;
   height: 12px;
-  border-radius: 6px;
+  border: 2px solid #ccc;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
 }
 
-/* First label active by default */
-.ts-scope label.first {
-  border-width: 6px;
+.ts-scope label:hover {
+  background: #999;
+  border-color: #999;
+  transform: scale(1.1);
+}
+
+/* Active dot styling - FIXED: Added missing commas */
+.ts-scope #first:checked ~ .ts-tabs-container label.first,
+.ts-scope #second:checked ~ .ts-tabs-container label.second,
+.ts-scope #third:checked ~ .ts-tabs-container label.third,
+.ts-scope #fourth:checked ~ .ts-tabs-container label.fourth,
+.ts-scope #fifth:checked ~ .ts-tabs-container label.fifth {
+  width: 14px;
+  height: 14px;
   border-color: #f6393f;
   background: #f6393f;
 }
 
-.ts-scope label.second {
-  left: 34%;
+.ts-scope #first:checked ~ .ts-tabs-container label.first:hover,
+.ts-scope #second:checked ~ .ts-tabs-container label.second:hover,
+.ts-scope #third:checked ~ .ts-tabs-container label.third:hover,
+.ts-scope #fourth:checked ~ .ts-tabs-container label.fourth:hover,
+.ts-scope #fifth:checked ~ .ts-tabs-container label.fifth:hover {
+  background: #d63035;
+  border-color: #d63035;
 }
 
-.ts-scope label.third {
-  left: 68%;
-}
-
+/* Blockquote - AUTO ADJUSTABLE */
 .ts-scope blockquote {
   margin: 0;
   padding: 30px;
-  width: 500px;
+  width: 100%;
   background-color: #f6393f;
   color: white;
-  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   position: relative;
-  transition: background-color 0.6s linear;
+  border-radius: 10px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
+/* Arrow under blockquote */
 .ts-scope blockquote:after {
-  content: " ";
-  height: 0;
-  width: 0;
+  content: "";
   position: absolute;
   top: 100%;
-  border: solid transparent;
-  border-top-color: #f6393f;
-  border-left-color: #f6393f;
-  border-width: 10px;
   left: 10%;
-}
-
-.ts-scope #second:checked ~ .two blockquote {
-  background-color: #f6393f;
-}
-
-.ts-scope .two blockquote:after {
-  border: solid transparent;
+  border: 12px solid transparent;
   border-top-color: #f6393f;
   border-left-color: #f6393f;
-  border-width: 10px;
 }
 
-.ts-scope #third:checked ~ .three blockquote {
-  background-color: #f6393f;
-}
-
-.ts-scope .three blockquote:after {
-  border: solid transparent;
-  border-top-color: #f6393f;
-  border-left-color: #f6393f;
-  border-width: 10px;
-}
-
+/* Quote marks */
 .ts-scope .quotes {
   position: absolute;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 5em;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 4em;
+  font-family: Georgia, serif;
+  line-height: 1;
 }
 
 .ts-scope .leftq {
-  top: -25px;
-  left: 5px;
+  top: 10px;
+  left: 10px;
 }
 
 .ts-scope .rightq {
-  bottom: -10px;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
 }
 
+/* Content wrapper - AUTO ADJUSTABLE */
 .ts-scope .ts-content-wrapper {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-top: 20px;
-  clear: both;
+  margin-top: 25px;
+  width: 100%;
 }
 
 .ts-scope img {
   flex-shrink: 0;
   border-radius: 50%;
   object-fit: cover;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  border: 4px solid #f6393f;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .ts-scope .ts-text-content {
@@ -3621,278 +3649,46 @@ body.modal-open {
   justify-content: center;
 }
 
-.ts-scope .slide {
-  position: absolute;
-  left: -100%;
-  opacity: 0;
-  transition: all 0.6s ease-in;
-}
-
-/* First slide visible by default */
-.ts-scope .one.slide {
-  left: 0;
-  opacity: 1;
-}
-
-.ts-scope #first:checked ~ div.one {
-  left: 0;
-  opacity: 1;
-}
-
-.ts-scope #first:checked ~ label.first {
-  border-width: 6px;
-  border-color: #f6393f;
-  background: #f6393f;
-}
-
-.ts-scope #second:checked ~ label.second {
-  border-width: 6px;
-  border-color: #f6393f;
-  background: #f6393f;
-}
-
-.ts-scope #third:checked ~ label.third {
-  border: 6px solid #f6393f;
-  background: #f6393f;
-}
-
-.ts-scope #first:checked ~ div.one {
-  left: 0;
-  opacity: 1;
-}
-
-.ts-scope #second:checked ~ div.two {
-  left: 0;
-  opacity: 1;
-}
-
-.ts-scope #third:checked ~ div.three {
-  left: 0;
-  opacity: 1;
-}
-
 .ts-scope h2 {
-  color: #736861;
-  margin: 0 0 5px 0;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-}
-
-.ts-scope h6 {
-  color: #928566;
-  margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .ts-scope {
-    padding: 60px 20px;
-  }
-
-  .ts-scope h1 {
-    font-size: 32px;
-    margin-bottom: 40px;
-  }
-
-  .ts-scope .container {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .ts-scope blockquote {
-    width: 100%;
-    padding: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .ts-scope {
-    padding: 40px 15px;
-  }
-
-  .ts-scope h1 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .ts-scope blockquote {
-    padding: 20px;
-  }
-
-  .ts-scope img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-/* testimonial section */
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-.ts-scope * {
-  box-sizing: border-box;
-}
-
-.ts-scope {
-  font: normal 1em/1.5 "Open Sans";
-}
-
-.ts-scope a {
-  color: #ccc;
-}
-
-.ts-scope .container {
-  width: 500px;
-  min-height: 315px;
-  margin: 0 auto;
-  position: relative;
-  padding-bottom: 30px;
-  overflow: hidden;
-}
-
-.ts-scope h1 {
-  text-align: center;
-  text-shadow: 0 1px white;
   color: #02303F;
-}
-
-.ts-scope h2 {
-  color: #736861;
-  margin: 15px 0 5px;
-  text-shadow: 0 1px rgba(255,255,255,0.5);
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .ts-scope h6 {
-  color: #928566;
+  color: #666;
   margin: 0;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.ts-scope input[type="radio"] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.ts-scope label {
-  display: block;
-  width: 32%;
-  border: 4px solid white;
-  position: absolute;
-  bottom: 5px;
-  cursor: pointer;
-  transition: border-color 0.3s linear;
-}
-
-.ts-scope label.second { left: 34%; }
-.ts-scope label.third { left: 68%; }
-
-.ts-scope blockquote {
-  margin: 0;
-  padding: 30px;
-  width: 500px;
-  background-color: #DB532B;
-  color: white;
-  box-shadow: 0 5px 2px rgba(0,0,0,0.1);
-  position: relative;
-  transition: background-color 0.6s linear;
-}
-
-.ts-scope blockquote:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 10%;
-  border: 10px solid transparent;
-  border-top-color: #DB532B;
-  border-left-color: #DB532B;
-}
-
-.ts-scope #second:checked ~ .two blockquote {
-  background-color: purple;
-}
-
-.ts-scope .two blockquote:after {
-  border-top-color: purple;
-  border-left-color: purple;
-}
-
-.ts-scope #third:checked ~ .three blockquote {
-  background-color: #54885F;
-}
-
-.ts-scope .three blockquote:after {
-  border-top-color: #54885F;
-  border-left-color: #54885F;
-}
-
-.ts-scope .quotes {
-  position: absolute;
-  color: rgba(255,255,255,0.5);
-  font-size: 5em;
-}
-
-.ts-scope .leftq { top: -25px; left: 5px; }
-.ts-scope .rightq { bottom: -10px; right: 5px; }
-
-.ts-scope img {
-  float: left;
-  margin-right: 20px;
-}
-
+/* Slide animations */
 .ts-scope .slide {
   position: absolute;
-  left: -100%;
+  left: 0;
+  top: 0;
+  width: 100%;
   opacity: 0;
-  transition: all 0.6s ease-in;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
-.ts-scope #first:checked ~ .one {
-  left: 0;
+/* Show active slides - FIXED: Added missing commas */
+.ts-scope #first:checked ~ div.one,
+.ts-scope #second:checked ~ div.two,
+.ts-scope #third:checked ~ div.three,
+.ts-scope #fourth:checked ~ div.four,
+.ts-scope #fifth:checked ~ div.five {
   opacity: 1;
+  visibility: visible;
+  z-index: 10;
 }
 
-.ts-scope #second:checked ~ .two {
-  left: 0;
-  opacity: 1;
-}
-
-.ts-scope #third:checked ~ .three {
-  left: 0;
-  opacity: 1;
-}
-
-.ts-scope #first:checked ~ label.first {
-  border-color: #f6393f;
-  border-width: 6px;
-  background: #f6393f;
-}
-
-.ts-scope #second:checked ~ label.second {
-  border-color: #f6393f;
-  border-width: 6px;
-  background: #f6393f;
-}
-
-.ts-scope #third:checked ~ label.third {
-  border-color: #f6393f;
-  border-width: 6px;
-  background: #f6393f;
-}
-
-.ts-scope img {
-  float: left;
-  margin-right: 20px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .ts-scope {
-    padding: 60px 20px;
+    padding: 40px 20px;
   }
 
   .ts-scope h1 {
@@ -3901,19 +3697,37 @@ body.modal-open {
   }
 
   .ts-scope .container {
-    width: 100%;
-    max-width: 500px;
+    max-width: 100%;
+    padding-bottom: 60px;
   }
 
   .ts-scope blockquote {
-    width: 100%;
-    padding: 25px;
+    padding: 25px 20px;
+    font-size: 15px;
+    min-height: 130px;
+  }
+
+  .ts-scope .quotes {
+    font-size: 3em;
+  }
+
+  .ts-scope img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ts-scope h2 {
+    font-size: 20px;
+  }
+
+  .ts-scope h6 {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
   .ts-scope {
-    padding: 40px 15px;
+    padding: 30px 15px;
   }
 
   .ts-scope h1 {
@@ -3921,12 +3735,68 @@ body.modal-open {
     margin-bottom: 30px;
   }
 
+  .ts-scope .container {
+    padding-bottom: 50px;
+  }
+
   .ts-scope blockquote {
-    padding: 20px;
+    padding: 20px 15px;
+    font-size: 14px;
+    min-height: 120px;
+  }
+
+  .ts-scope blockquote:after {
+    border-width: 10px;
+  }
+
+  .ts-scope .quotes {
+    font-size: 2.5em;
+  }
+
+  .ts-scope .leftq {
+    top: 5px;
+    left: 5px;
+  }
+
+  .ts-scope .rightq {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .ts-scope .ts-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
   }
 
   .ts-scope img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .ts-scope h2 {
+    font-size: 18px;
+  }
+
+  .ts-scope h6 {
+    font-size: 12px;
+  }
+
+  .ts-scope .ts-tabs-container {
+    gap: 12px;
+  }
+
+  .ts-scope label {
+    width: 10px;
+    height: 10px;
+  }
+
+  .ts-scope #first:checked ~ .ts-tabs-container label.first,
+  .ts-scope #second:checked ~ .ts-tabs-container label.second,
+  .ts-scope #third:checked ~ .ts-tabs-container label.third,
+  .ts-scope #fourth:checked ~ .ts-tabs-container label.fourth,
+  .ts-scope #fifth:checked ~ .ts-tabs-container label.fifth {
+    width: 12px;
+    height: 12px;
   }
 }
