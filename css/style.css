@@ -1780,18 +1780,27 @@ h1{
 .gla-programs-dialog__meta-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 10px 16px;
-  background-color: #f9fafb;
+  background-color: #000000;
   border-radius: 8px;
   font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #374151;
+  color: #ffffff;
   font-weight: 500;
 }
 
 .gla-programs-dialog__meta-icon {
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gla-programs-dialog__meta-icon svg {
+  color: #ffffff;
+  stroke: #ffffff;
 }
 
 .gla-programs-dialog__description {
@@ -1822,17 +1831,96 @@ h1{
 .gla-programs-dialog__specializations-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .gla-programs-dialog__specialization-pill {
-  padding: 8px 16px;
-  border-radius: 20px;
-  background-color: #FFF4E6;
-  color: #FF6633;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f75e2b 0%, #ff8a00 100%);
+  color: #ffffff;
   font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(247, 94, 43, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.gla-programs-dialog__specialization-pill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.gla-programs-dialog__specialization-pill:hover::before {
+  left: 100%;
+}
+
+.gla-programs-dialog__specialization-pill:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(247, 94, 43, 0.5);
+  background: linear-gradient(135deg, #ff8a00 0%, #f75e2b 100%);
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.gla-programs-dialog__specialization-pill:nth-child(10) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .gla-programs-dialog__actions {
