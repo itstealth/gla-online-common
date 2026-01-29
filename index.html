@@ -714,6 +714,140 @@
   }
 
 }
+
+/* GLA Features Section */
+.gla-features-section {
+  background: #000000;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.gla-features-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.gla-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.gla-feature-block {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  background: transparent;
+  height: 80px;
+}
+
+.gla-feature-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: #f75e2b;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gla-feature-icon-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.gla-feature-text {
+  background: #374151;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 0;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+  flex: 1;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles for Features Section */
+@media (max-width: 1024px) {
+  .gla-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gla-features-section {
+    padding: 40px 15px;
+  }
+
+  .gla-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .gla-feature-block {
+    height: 70px;
+  }
+
+  .gla-feature-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+
+  .gla-feature-icon-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gla-feature-text {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gla-features-section {
+    padding: 30px 12px;
+  }
+
+  .gla-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .gla-feature-block {
+    height: 60px;
+  }
+
+  .gla-feature-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .gla-feature-icon-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .gla-feature-text {
+    font-size: 0.8rem;
+    padding: 10px;
+    height: 60px;
+  }
+}
 </style>
 
 
@@ -771,12 +905,76 @@
     <div id="reg-form" style="padding:20px 0 0 0"></div>
   </div>
 
+
+    <!-- GLA Features Section -->
+    <section class="gla-features-section">
+      <div class="gla-features-container">
+        <div class="gla-features-grid">
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/management.png" alt="NAAC A+ Accreditation Badge" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">NAAC A+ Accredited University</div>
+          </div>
+  
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/2-InfoG.png" alt="Faculty Members" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">Highly Experienced Pool of Faculty Members</div>
+          </div>
+  
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/3-InfoG.png" alt="Alumni Base" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">36k+ Global Alumni Base</div>
+          </div>
+  
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/4-InfoG.png" alt="EMI Options" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">EMI Options Available</div>
+          </div>
+  
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/5-InfoG.png" alt="Peer Learning" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">Peer Learning & Group Projects</div>
+          </div>
+  
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/6-InfoG.png" alt="Live Lectures" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">Live & Recorded Lectures</div>
+          </div>
+  
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/7-InfoG.png" alt="Placements" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">Placements Powered by GLA University</div>
+          </div>
+  
+          <div class="gla-feature-block">
+            <div class="gla-feature-icon-wrapper">
+              <img src="images/8-InfoG.png" alt="Excellence" class="gla-feature-icon-image">
+            </div>
+            <div class="gla-feature-text">27+ Years of Excellence in Education</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   <!-- Why Choose SMU Section -->
   <section class="smu-hero-section">
     <div class="smu-hero-container">
       <div class="smu-content-wrapper">
         <div class="smu-text-content">
-          <h1 class="smu-main-heading">Milestones Achieved by GLA</h1>
+          <h1 class="smu-main-heading">About GLA</h1>
           <p class="smu-description">GLA University's Centre for Distance and Online Education (CDOE) is a beacon of
             accessible and flexible learning, providing opportunities for individuals to pursue higher education while
             balancing their professional and personal commitments. With a determination to quality education, GLA Online
@@ -809,10 +1007,12 @@
       </div>
     </div>
   </section>
+
+
   <!-- End Why Choose SMU Section -->
 
   <!-- About GLA Online & Digital Learnings Platforms -->
-  <section class="gla-digital-section map">
+  <!-- <section class="gla-digital-section map">
     <div class="gla-digital-container">
       <div class="gla-digital-header">
         <h2 class="gla-digital-heading">About GLA Online & Digital Learnings</h2>
@@ -878,7 +1078,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+
 
   <!-- About GLA Programs -->
   <section class="gla-programs-section">
