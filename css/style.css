@@ -1198,7 +1198,7 @@ h1{
   position: relative;
   z-index: 3;
   grid-column: 1 / 9; /* Takes 8 columns (1 to 9) - 66.67% width */
-  padding: 40px 40px 80px 0;
+  padding: 40px 40px 40px 0;
   display: flex;
   align-items: center;
 }
@@ -1364,7 +1364,7 @@ h1{
   .smu-content-wrapper {
     grid-column: 1 / -1;
     width: 100%;
-    padding: 40px 0;
+    padding: 15px 0;
   }
   
   .smu-text-content {
@@ -1413,7 +1413,7 @@ h1{
 /* Small Mobile */
 @media (max-width: 480px) {
   .smu-text-content {
-    padding: 30px 20px;
+    padding: 25px 20px;
   }
   
   .smu-main-heading {
