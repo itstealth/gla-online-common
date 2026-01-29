@@ -92,10 +92,11 @@
   height: 600px;
   background-image: url('images/banner-new.png');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   padding: 40px 20px;
 }
@@ -417,8 +418,12 @@
 @media (max-width: 768px) {
   .gla-hero-section {
     height: auto;
-    min-height: 520px;
-    padding: 35px 20px;
+    min-height: 665px;
+    padding: 0;
+    background-image: url('images/banner-new-mob.png');
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
 
 
@@ -525,11 +530,15 @@
 
 }
 
+
+
 /* Extra Small Mobile - Ultra Compact */
 @media (max-width: 480px) {
   .gla-hero-section {
-    min-height: 480px;
-    padding: 30px 16px;
+    min-height: 665px;
+    padding: 0;
+    background-size: 100% auto;
+    background-position: center top;
   }
 
 
@@ -615,11 +624,23 @@
 
 }
 
+/* Small mobile devices - adjust height to prevent gaps */
+@media (max-width: 415px) {
+  .gla-hero-section {
+    min-height: auto;
+    height: 0;
+    padding-bottom: 161.4%; /* 665/412 * 100 = aspect ratio */
+    background-size: 100% 100%;
+    background-position: center top;
+  }
+}
 /* Landscape Mobile Optimization */
 @media (max-width: 768px) and (max-height: 500px) {
   .gla-hero-section {
-    min-height: 420px;
-    padding: 25px 15px;
+    min-height: 665px;
+    padding: 0;
+    background-size: 100% auto;
+    background-position: center top;
   }
 
   .gla-logo-wrapper {
