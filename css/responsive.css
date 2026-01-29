@@ -138,11 +138,19 @@
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 28px;
     color: #000;
     font-weight: bold;
     padding-bottom: 0px; margin-bottom: 10px; text-align: center;
+    font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	
+}
+
+/* Override for mobile - use standardized sizes */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
 }
 .wid-50 {
     width: 80%;

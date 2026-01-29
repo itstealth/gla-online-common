@@ -45,6 +45,57 @@ p {
   font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* Standardized Section Typography - All Sections */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Main Section Headings - Desktop */
+h1.center, h1.section-title, .section-title, .benchmarks-heading, .gla-programs-heading, .smu-main-heading, h1 {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+h2.center, h2.section-title, h2 {
+  font-family: 'HelveticaNowDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Tablet Responsive - Standardized (max-width: 1024px) */
+@media (max-width: 1024px) {
+  h1.center, h1.section-title, .section-title, .benchmarks-heading, .gla-programs-heading, .smu-main-heading, h1 {
+    font-size: 36px;
+  }
+  
+  h2.center, h2.section-title, h2 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile Responsive - Standardized (max-width: 768px) */
+@media (max-width: 768px) {
+  h1.center, h1.section-title, .section-title, .benchmarks-heading, .gla-programs-heading, .smu-main-heading, h1 {
+    font-size: 28px;
+  }
+  
+  h2.center, h2.section-title, h2 {
+    font-size: 24px;
+  }
+}
+
+/* Small Mobile Responsive - Standardized (max-width: 480px) */
+@media (max-width: 480px) {
+  h1.center, h1.section-title, .section-title, .benchmarks-heading, .gla-programs-heading, .smu-main-heading, h1 {
+    font-size: 24px;
+  }
+  
+  h2.center, h2.section-title, h2 {
+    font-size: 20px;
+  }
+}
+
 /* ---- reset ---- */
 
 
