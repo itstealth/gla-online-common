@@ -948,6 +948,15 @@
   align-items: center;
 }
 
+/* Default desktop: show desktop text, hide mobile text */
+.gla-feature-text .gla-feature-text-desktop {
+  display: inline;
+}
+
+.gla-feature-text .gla-feature-text-mobile {
+  display: none;
+}
+
 /* Responsive Styles for Features Section */
 @media (max-width: 1024px) {
   .gla-features-grid {
@@ -1084,56 +1093,59 @@
         <div class="gla-features-grid">
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/management.png" alt="NAAC A+ Accreditation Badge" class="gla-feature-icon-image">
+              <img src="images/icons/medal.png" alt="NAAC A+ Accreditation Badge" class="gla-feature-icon-image">
             </div>
             <div class="gla-feature-text">NAAC A+ Accredited University</div>
           </div>
   
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/2-InfoG.png" alt="Faculty Members" class="gla-feature-icon-image">
+              <img src="images/icons/board.png" alt="Faculty Members" class="gla-feature-icon-image">
             </div>
             <div class="gla-feature-text">Experienced Pool of Faculty Members</div>
           </div>
   
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/3-InfoG.png" alt="Alumni Base" class="gla-feature-icon-image">
+              <img src="images/icons/handshake.png" alt="Alumni Base" class="gla-feature-icon-image">
             </div>
             <div class="gla-feature-text">50k+ Global Alumni Base</div>
           </div>
   
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/4-InfoG.png" alt="EMI Options" class="gla-feature-icon-image">
+              <img src="images/icons/wallet-filled-money-tool.png" alt="EMI Options" class="gla-feature-icon-image">
             </div>
-            <div class="gla-feature-text">EMI Options Available</div>
+            <div class="gla-feature-text">
+              <span class="gla-feature-text-desktop">Affordable Programme Fee & Easy EMI Options Available</span>
+              <span class="gla-feature-text-mobile">Affordable Prog. Fee & EMI Options</span>
+            </div>
           </div>
   
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/5-InfoG.png" alt="Peer Learning" class="gla-feature-icon-image">
+              <img src="images/icons/circle-of-friends.png" alt="Peer Learning" class="gla-feature-icon-image">
             </div>
             <div class="gla-feature-text">Peer Learning & Group Projects</div>
           </div>
   
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/6-InfoG.png" alt="Live Lectures" class="gla-feature-icon-image">
+              <img src="images/icons/video-camera.png" alt="Live Lectures" class="gla-feature-icon-image">
             </div>
             <div class="gla-feature-text">Live & Recorded Lectures</div>
           </div>
   
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/7-InfoG.png" alt="Placements" class="gla-feature-icon-image">
+              <img src="images/icons/briefcase.png" alt="Placements" class="gla-feature-icon-image">
             </div>
             <div class="gla-feature-text">Placements Powered by GLA University</div>
           </div>
   
           <div class="gla-feature-block">
             <div class="gla-feature-icon-wrapper">
-              <img src="images/8-InfoG.png" alt="Excellence" class="gla-feature-icon-image">
+              <img src="images/icons/trophy.png" alt="Excellence" class="gla-feature-icon-image">
             </div>
             <div class="gla-feature-text">28+ Years of Excellence in Education</div>
           </div>

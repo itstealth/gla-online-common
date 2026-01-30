@@ -362,6 +362,13 @@ font-size: 20px;
     margin-bottom: 16px;
 }
 	
+	/* Mobile text for Affordable Programme Fee */
+	.gla-feature-text .gla-feature-text-desktop {
+		display: none !important;
+	}
 	
+	.gla-feature-text .gla-feature-text-mobile {
+		display: inline !important;
+	}
 	
 	}
