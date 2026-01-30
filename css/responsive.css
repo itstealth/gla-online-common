@@ -11,6 +11,30 @@
     overflow-x: hidden;
   }
 	
+  /* Mobile bottom bar - Always visible, no gaps */
+  .applybtn a {
+    transform: rotate(0deg);
+    bottom: 0;
+    top: auto;
+    left: 0;
+    text-align: center;
+    font-weight: 600;
+    right: auto;
+    border-radius: 0;
+    z-index: 999999;
+    position: fixed;
+    width: 33.333%;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background: #0066cc;
+    border: none;
+  }
+  
   .applybtn.sticky a {
     transform: rotate(0deg);
     bottom: 0;
@@ -18,9 +42,82 @@
     left: 0;
     text-align: center;
     font-weight: 600;
-    right: 0;
+    right: auto;
     border-radius: 0;
     z-index: 999999;
+    position: fixed;
+    width: 33.333%;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background: #0066cc;
+    border: none;
+    display: flex !important;
+  }
+  
+  /* Mobile bottom bar - Enquire Now, WhatsApp, Call together */
+  .wtsup {
+    position: fixed;
+    bottom: 0;
+    right: 33.333%;
+    width: 33.333%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #29a71a;
+    z-index: 999999;
+    border: none;
+  }
+  
+  .wtsup a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wtsup img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .call {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 33.333%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    z-index: 999999;
+    border: none;
+  }
+  
+  .call a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .call img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .phno2 {
+    display: none !important;
   }
   .form-sec {
     position: relative;
